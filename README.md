@@ -5,7 +5,7 @@ Tarea 2 y 3 de Inteligencia Artificial - Alan Emiliano Palomo Plata - 2048459
 que reproduce paso a paso el recorrido del árbol de juego: qué nodo se visita, qué valor sube
 de cada hijo a su padre, cómo cambian α y β, y qué ramas se podan y por qué.
 
-📹 **Video de la demo:** _pendiente (enlace no listado)_
+📹 **Video de la demo:** https://drive.google.com/file/d/1F14_INQ8zGTSliQnUp6gHykhdY2qKaCK/view?usp=sharing
 
 ## Requisitos
 
