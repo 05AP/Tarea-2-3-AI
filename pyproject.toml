@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gato-minimax"
+version = "1.0.0"
+description = "Minimax con poda alfa-beta para el gato, con visualización paso a paso del árbol de búsqueda."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Alan Emiliano Palomo Plata" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.11"]
+
+[project.scripts]
+gato-minimax = "gato_minimax.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gato_minimax"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "N", "B", "UP", "SIM", "RUF"]
+allowed-confusables = ["α"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/gato_minimax/game.py" = ["E741"]  # Player.O es el nombre natural de la ficha
+
+[tool.mypy]
+strict = true
+files = ["src", "tests"]
+mypy_path = "src"
